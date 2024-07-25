@@ -1,0 +1,301 @@
+{
+	"info": {
+		"_postman_id": "fe029cac-43ce-49ed-834e-528f24dbd170",
+		"name": "dpsi uas",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "36200245"
+	},
+	"item": [
+		{
+			"name": "http://localhost:3000/produk",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2YTBjODViYmQwNGYyNTJmMWI5MmIxMSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTcyMTkwODI0NCwiZXhwIjoxNzIxOTExODQ0fQ.dNA0R67VPQAyvraLy7oTeSiDsCBi6JSXL1LvFASQhZg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idkategori\": \"669e2db8efdf3dea98511008\",\r\n    \"namaproduk\": \"Kayu Jati\",\r\n    \"gambar\": \"gambar_kayu \",\r\n    \"deskripsi\": \"Kayu jati adalah salah satu jenis kayu yang memiliki kekuatan dan keawetan yang sangat tinggi.\",\r\n    \"harga\": 16000000,\r\n    \"stock\": 5\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/produk",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"produk"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/kategori",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2YTBjODViYmQwNGYyNTJmMWI5MmIxMSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTcyMTkwODI0NCwiZXhwIjoxNzIxOTExODQ0fQ.dNA0R67VPQAyvraLy7oTeSiDsCBi6JSXL1LvFASQhZg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"namakategori\": \"Nama Kategori\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/kategori",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"kategori"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/kategori/669e399971a66b70d9b82ee2",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2YTBjODViYmQwNGYyNTJmMWI5MmIxMSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTcyMTkwODI0NCwiZXhwIjoxNzIxOTExODQ0fQ.dNA0R67VPQAyvraLy7oTeSiDsCBi6JSXL1LvFASQhZg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/kategori/669e399971a66b70d9b82ee2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"kategori",
+						"669e399971a66b70d9b82ee2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/kategori/669e399971a66b70d9b82ee2",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2YTBjODViYmQwNGYyNTJmMWI5MmIxMSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTcyMTkwODI0NCwiZXhwIjoxNzIxOTExODQ0fQ.dNA0R67VPQAyvraLy7oTeSiDsCBi6JSXL1LvFASQhZg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/kategori/669e399971a66b70d9b82ee2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"kategori",
+						"669e399971a66b70d9b82ee2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/orderdetail",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2YTBjODViYmQwNGYyNTJmMWI5MmIxMSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTcyMTkwODI0NCwiZXhwIjoxNzIxOTExODQ0fQ.dNA0R67VPQAyvraLy7oTeSiDsCBi6JSXL1LvFASQhZg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"orderid\": \"12345\",\r\n    \"idproduk\": \"60d5f97b8c48dc0f8c5e7d3b\",\r\n    \"qty\": 2\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/orderdetail",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"orderdetail"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/pembayaran",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2YTBjODViYmQwNGYyNTJmMWI5MmIxMSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTcyMTkwODI0NCwiZXhwIjoxNzIxOTExODQ0fQ.dNA0R67VPQAyvraLy7oTeSiDsCBi6JSXL1LvFASQhZg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"metode\": \"Transfer Bank\",\r\n    \"norek\": \"1234567890\",\r\n    \"logo\": \"https://example.com/logo.png\",\r\n    \"orderid\": \"64c7e4d5070f1f54c4b7e3e8\",  // Ganti dengan ID Order yang valid\r\n    \"userid\": \"64c7e4d5070f1f54c4b7e3e7\"   // Ganti dengan ID User yang valid\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/pembayaran",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"pembayaran"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/konfirmasi",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2YTBjODViYmQwNGYyNTJmMWI5MmIxMSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTcyMTkwODI0NCwiZXhwIjoxNzIxOTExODQ0fQ.dNA0R67VPQAyvraLy7oTeSiDsCBi6JSXL1LvFASQhZg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"orderid\": \"1234567890\",  // Ganti dengan ID Order yang valid\r\n    \"userid\": \"64c7e4d5070f1f54c4b7e3e7\",  // Ganti dengan ID User yang valid\r\n    \"payment\": \"Transfer Bank\",\r\n    \"namarekening\": \"John Doe\",\r\n    \"tglbayar\": \"2024-07-25T00:00:00.000Z\",\r\n    \"tgldisumit\": \"2024-07-25T00:00:00.000Z\", // Opsional, bisa diabaikan\r\n    \"pembayaranid\": \"64c7e4d5070f1f54c4b7e3e6\" // Ganti dengan ID Pembayaran yang valid\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/konfirmasi",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"konfirmasi"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/cart",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2YTBjODViYmQwNGYyNTJmMWI5MmIxMSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTcyMTkwODI0NCwiZXhwIjoxNzIxOTExODQ0fQ.dNA0R67VPQAyvraLy7oTeSiDsCBi6JSXL1LvFASQhZg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"orderid\": \"1234567890\",  // Ganti dengan ID Order yang valid\r\n    \"userid\": \"64c7e4d5070f1f54c4b7e3e7\",  // Ganti dengan ID User yang valid\r\n    \"status\": \"Pending\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/cart",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"cart"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
