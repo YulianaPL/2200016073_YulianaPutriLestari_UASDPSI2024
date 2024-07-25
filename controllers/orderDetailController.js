@@ -1,4 +1,4 @@
-const OrderDetail = require('../models/OrderDetail');
+const OrderDetail = require('../models/orderDetail');
 
 // Create new order detail
 exports.createOrderDetail = async (req, res) => {
