@@ -1,5 +1,6 @@
 const User = require('../models/User');
-const bcrypt = require('bcryptjs');
+const bcrypt = require('bcrypt');
+
 const jwt = require('jsonwebtoken');
 const { generateToken } = require('../middleware/auth'); // Jika menggunakan JWT untuk token
 
@@ -18,6 +19,7 @@ const register = async (req, res) => {
 // Fungsi login
 const login = async (req, res) => {
     try {
+
         const { username, password } = req.body;
         const user = await User.findOne({ username });
         if (!user) {
